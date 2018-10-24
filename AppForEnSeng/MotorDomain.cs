@@ -8,15 +8,23 @@ namespace AppForEnSeng
 {
     class MotorDomain
     {
+        //Den hastighed motor skal køre rund med
         public int Hastighed { get; set; }
+        //Postion motor skal stilles i
         public int Position { get; set; }
+        //Den position motor har når den stoppes
+        public int GemtPosition { get; set; }
+        //Eksempel på hvilken forbindelse der bruges til den rigtige motor
         private int Portnummer { get; set; }
+        //Den klasse som håndterer den fysiske kommunikation til motoren
         private MotorIF Motor {get;set;}
+
         public MotorDomain(int motorport)
         {
             Portnummer = motorport;
             Position = 0;
             Hastighed = 0;
+            GemtPosition = 0;
             Motor = new MotorIF(Portnummer);
         }
         public void StartHoejre() {
@@ -42,11 +50,12 @@ namespace AppForEnSeng
         public void Stop() {
             //Stop motor på "portnummer"
             Motor.Stop();
+            GemtPosition = Motor.HentPosition();
         }
 
-        public int PositionNu() {
-            return Motor.HentPosition();
-        }
+        //public int PositionNu() {
+        //    return Motor.HentPosition();
+        //}
 
 
 

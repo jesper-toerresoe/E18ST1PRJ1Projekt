@@ -1,2 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AppForEnSeng.MotorDomain">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAACAACAgAAAAAAAARAAAAAAAIAAEAAAAAAA=</HashCode>
+      <FileName>MotorDomain.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Motor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppForEnSeng.MotorIF">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAIACAACAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>MotorIF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppForEnSeng.StartController">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAIABAAAAAAAAAAAAAAAAAAIAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StartController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MotorEt" />
+      <Property Name="MotorTo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppForEnSeng.StopController">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAEAAAAAAAAAAgAAIAABAAAABAAAAACAAAA=</HashCode>
+      <FileName>StopController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MotorTo" />
+      <Property Name="MotorEt" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppForEnSeng.FormBoundary">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIACAAAIAAAACABAACAEA4AAAAAFAIAAAAEIA=</HashCode>
+      <FileName>FormBoundary.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="StartController" />
+      <Property Name="StopController" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="8.83" />
+</ClassDiagram>
